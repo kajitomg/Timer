@@ -149,7 +149,9 @@ body {
 	&__block {
 		position: relative;
 		z-index: 3;
-		width: 800px;
+		max-width: 800px;
+		padding: 0 20px;
+		//width: 800px;
 		height: 120px;
 		//background: rgb(95, 57, 57);
 		//background: rgb(185, 176, 176);
@@ -214,40 +216,7 @@ body {
 			inset 0 0 1px rgba(49, 13, 252, 0.897), inset 0 0 5px rgb(255, 255, 255), 0 0 10px rgba(201, 13, 160, 0.897),
 			0 0 10px rgba(17, 0, 255, 0.699);
 	}
-	&__bottom-line-reflection-left {
-		perspective: 600px;
-		z-index: 3;
-		position: absolute;
-		//top: 100%;
-		//bottom: 0;
-		//left: -5px;
-		//width: 3px;
-		height: 30%;
-		background: linear-gradient(0deg, transparent 0, rgba(255, 255, 255, 0.329) 80%);
-		text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.048), 0px 0px 5px rgba(255, 255, 255, 0.062),
-			0px 2px 10px rgba(255, 255, 255, 0.075), 0px 5px 15px rgba(255, 255, 255, 0.055),
-			0px 5px 10px rgba(17, 0, 255, 0.103), 0 0px 1px rgba(55, 0, 255, 0.096), 0 0px 20px rgba(55, 0, 255, 0.075),
-			0 0px 40px rgba(46, 0, 212, 0.075), 0 0px 10px rgba(221, 12, 176, 0.151), 0 0px 5px rgba(255, 9, 124, 0.089),
-			0 0px 10px rgba(55, 0, 255, 0.082), 0 5px 50px rgba(32, 1, 145, 0.11), 0 25px 20px rgba(49, 3, 216, 0.075),
-			0 25px 20px rgba(49, 3, 216, 0.075);
-		transform: rotateZ(15deg);
-	}
-	&__bottom-line-reflection-right {
-		z-index: 3;
-		position: absolute;
-		//top: 100%;
-		//right: -5px;
-		width: 3px;
-		height: 30%;
-		background: linear-gradient(0deg, transparent 0, rgba(255, 255, 255, 0.329) 80%);
-		text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.048), 0px 0px 5px rgba(255, 255, 255, 0.062),
-			0px 2px 10px rgba(255, 255, 255, 0.075), 0px 5px 15px rgba(255, 255, 255, 0.055),
-			0px 5px 10px rgba(17, 0, 255, 0.103), 0 0px 1px rgba(55, 0, 255, 0.096), 0 0px 20px rgba(55, 0, 255, 0.075),
-			0 0px 40px rgba(46, 0, 212, 0.075), 0 0px 10px rgba(221, 12, 176, 0.151), 0 0px 5px rgba(255, 9, 124, 0.089),
-			0 0px 10px rgba(55, 0, 255, 0.082), 0 5px 50px rgba(32, 1, 145, 0.11), 0 25px 20px rgba(49, 3, 216, 0.075),
-			0 25px 20px rgba(49, 3, 216, 0.075);
-		transform: rotateZ(-15deg);
-	}
+
 	/*
 	&__block_reflection {
 		position: absolute;
@@ -260,6 +229,7 @@ body {
 		transform: rotateX(180deg);
 	}*/
 	&__time-tracing {
+		white-space: nowrap;
 		font-weight: 100;
 		z-index: 3;
 		position: absolute;
@@ -268,6 +238,15 @@ body {
 		color: rgb(255, 240, 254);
 		transform: translate3d(0, 20%, 0);
 		text-align: center;
+		@media (max-width: 767px) {
+			span {
+				font-size: 16px;
+
+				span {
+					font-size: 36px;
+				}
+			}
+		}
 		span {
 			font-size: 32px;
 			span {
@@ -290,9 +269,19 @@ body {
 			0 0px 40px rgba(46, 0, 212, 0.747), 0 0px 10px rgba(221, 12, 176, 0.76), 0 0px 5px rgba(255, 9, 124, 0.795),
 			0 0px 10px rgb(55, 0, 255), 0 5px 50px rgba(32, 1, 145, 0.534), 0 25px 20px rgba(49, 3, 216, 0.76),
 			0 25px 20px rgba(49, 3, 216, 0.76);
+		white-space: nowrap;
+		@media (max-width: 767px) {
+			span {
+				font-size: 16px;
 
+				span {
+					font-size: 36px;
+				}
+			}
+		}
 		span {
 			font-size: 32px;
+
 			span {
 				font-size: 88px;
 			}
@@ -301,6 +290,7 @@ body {
 		//flex-direction: row;
 	}
 	&__time-reflection {
+		white-space: nowrap;
 		perspective: 600px;
 		font-weight: 900;
 		z-index: 4;
@@ -320,6 +310,15 @@ body {
 			0 0px 10px rgba(55, 0, 255, 0.082), 0 5px 50px rgba(32, 1, 145, 0.11), 0 25px 20px rgba(49, 3, 216, 0.075),
 			0 25px 20px rgba(49, 3, 216, 0.075);
 		text-align: center;
+		@media (max-width: 767px) {
+			span {
+				font-size: 16px;
+
+				span {
+					font-size: 36px;
+				}
+			}
+		}
 		span {
 			font-size: 32px;
 			span {
